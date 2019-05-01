@@ -11,13 +11,25 @@
     </head>
     <body>
         <script type="text/x-handlebars" data-template-name="application">
-  			    Hello, {{firstName}} {{lastName}}
-        </script>
-		    <script type="text/x-handlebars" data-template-name="index">
-            <h1>{{firstName}} {{lastName}}</h1>
-        </script>
-		    <script type="text/x-handlebars" data-template-name="about">
-            <h1>About SkillBakery</h1>
+            <header>
+              <h1>SkillBakery</h1>
+            </header>
+
+            <div>
+              {{#if isCompany}}
+                Hello, {{firstName}} {{lastName}}
+                {{else if hasWebsite}}
+                Kirby Craft
+              {{/if}}
+
+              {{#unless isCompany}}
+                  is wonderful company.
+              {{/unless}}    
+            </div>
+
+            <footer>
+              &copy;2019
+            </footer>
         </script>
 
         <script src="js/jquery-1.11.2.min.js"></script>

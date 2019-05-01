@@ -5,6 +5,8 @@ var app = Ember.Application.create({
 });
 
 app.ApplicationController = Ember.Controller.extend({
-  firstName:"SkillBakery",
-  lastName:"Studio"
+  isCompany: true,
+  hasWebsite: true,
+  firstName:"April",
+  lastName:"Brown"
 });
