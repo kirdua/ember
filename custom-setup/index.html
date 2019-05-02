@@ -8,6 +8,14 @@
         <link href="http://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet" type="text/css">
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/navbar.css" rel="stylesheet">
+        <style>
+            .colortext{
+              color:red;
+            }
+            .greentxt {
+              color:green;
+            }
+        </style>
     </head>
     <body>
         <script type="text/x-handlebars" data-template-name="application">
@@ -16,15 +24,9 @@
             </header>
 
             <div>
-              {{#if isCompany}}
-                Hello, {{firstName}} {{lastName}}
-                {{else if hasWebsite}}
-                Kirby Craft
-              {{/if}}
-
-              {{#unless isCompany}}
-                  is wonderful company.
-              {{/unless}}    
+               Hello, {{firstName}}
+               <br/>
+               {{log 'FirstName' is firstName}}
             </div>
 
             <footer>
