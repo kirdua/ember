@@ -26,12 +26,24 @@
             <div>
                Hello, {{firstName}}
                <br/>
-               {{log 'FirstName' is firstName}}
+               Name {{ name }}
+               <br/>
+               {{#link-to 'about'}}About us{{/link-to}}
+               <br/>
+               {{outlet}}
             </div>
 
             <footer>
               &copy;2019
             </footer>
+        </script>
+
+        <script type="text/x-handlebars" data-template-name="about">
+          About a girl
+        </script>
+
+        <script type="text/x-handlebars" data-template-name="index">
+          {{summary}}
         </script>
 
         <script src="js/jquery-1.11.2.min.js"></script>
